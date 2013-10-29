@@ -19,6 +19,21 @@ Fin System: <input type="text" name="n_fin_systeme"><br />
 <input type="submit" value="Submit your Surboard">
 </form>	
 
+ <h2>Delete your surfboard(type in model name)</h2>
+
+  <form action="/delete/" method="post">
+Modelname: <input type="text" name="d_model"><br />
+
+<br />
+<input type="submit" value="Delete your Surboard">
+</form>	
+
+<h2>All Surfboards:</h2>
+<%  @all = Surfboard.all %>
+<%  @all.each do | board |  %>
+<%= board.model %> <br /> 
+<% end %>
+
 
 
 

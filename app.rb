@@ -17,6 +17,13 @@ post '/success/' do
   erb :success
 end
 
+post '/delete/' do 
+  @deleted	= Surfboard.find_by(model: params[:d_model])	
+  @deleted.destroy
+	
+  erb :delete
+end
+
 #post '/' do 
 #	Surfboard.create!(model: params[:n_model], size: params[:n_size], shaper: params[:n_shaper], fin_number: params[:n_fin_number],fin_systeme: params[:n_fin_systeme]  )
 #	erb :sucess
