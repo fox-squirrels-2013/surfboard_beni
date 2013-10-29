@@ -10,13 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131028185947) do
+ActiveRecord::Schema.define(version: 20131028152235) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "elephants", force: true do |t|
-    t.string "name"
+  create_table "surfboards", force: true do |t|
+    t.string "model"
+    t.string "size"
+    t.string "shaper"
+    t.string "fin_number"
+    t.string "fin_systeme"
   end
 
 end

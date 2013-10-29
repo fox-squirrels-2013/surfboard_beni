@@ -1,2 +1,2 @@
-class SurfBoard < ActiveRecord::Base
+class Surfboard < ActiveRecord::Base
 end
