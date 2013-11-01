@@ -1,17 +1,16 @@
-<!doctype>
-<html>
-<head>
-<title> Deleted </title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
+
+<h2>Delete your surfboard(type in model name)</h2>
+
+<form action="/delete/" method="post">
+	Modelname: <input type="text" name="d_model"><br />
+
+	<br />
+	<input type="submit" value="Delete your Surboard">
+</form>	
   
   <h1> Thanks for deleting the follwoing surfboard:</h2>
  <ul>
-  <li><%= @deleted %></li>
+  <li><%= @deleted.model %></li>
   <ul>
 <br />
 <a href="/">Back to the home page</a>
-</body>
-
-</html>

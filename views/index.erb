@@ -1,32 +1,5 @@
-<!doctype>
-<html>
-<head>
-<title> Surfboards </title>
-<link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-  <h1>Awesome surfboards</h1>
 
-  <h2>List your surfboard</h2>
-
-  <form action="/success/" method="post">
-Model: <input type="text" name="n_model"><br />
-Size: <input type="text" name="n_size"><br />
-Shaper: <input type="text" name="n_shaper"><br />
-Fin Number: <input type="text" name="n_fin_number"><br />
-Fin System: <input type="text" name="n_fin_systeme"><br />
-<br />
-<input type="submit" value="Submit your Surboard">
-</form>	
-
- <h2>Delete your surfboard(type in model name)</h2>
-
-  <form action="/delete/" method="post">
-Modelname: <input type="text" name="d_model"><br />
-
-<br />
-<input type="submit" value="Delete your Surboard">
-</form>	
+<h1>Awesome surfboards</h1>
 
 <h2>All Surfboards:</h2>
 <%  @all = Surfboard.all %>
@@ -35,9 +8,19 @@ Modelname: <input type="text" name="d_model"><br />
 <% end %>
 
 
+<h2>Update your surfboard(type in model name)</h2>
+
+<form action="/update/" method="post">
+	Modelname you would like to replace: <input type="text" name="u_model"><br />
+	<input type=hidden name=_method value=put>
+	Replace with: <input type="text" name="new_model">
+	<br />
+	<input type="submit" value="Update your Surboard">
+</form>	
 
 
-</body>
 
-</html>
+
+
+
 

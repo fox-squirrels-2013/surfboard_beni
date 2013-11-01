@@ -1,4 +1,5 @@
 surfboard_beni
 ==============
 
-Surfboard
+Surfboards are made here :) 
+If you have any questions about surfboards, go here: mws.com
